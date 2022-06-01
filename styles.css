@@ -1,4 +1,4 @@
-*,
+/* *,
 *::after,
 *::before{
     margin:0;
@@ -13,12 +13,12 @@ body{
 }
 nav>div{
     /* position:fixed; */
-    background-color: #1a1a1d;
+    /* background-color: #1a1a1d;
 }
 nav{
     width:100%;
-}
-button{
+} */
+/* button{
     padding:.7em;
     font-family: "Ubuntu";
     font-weight: 600;
@@ -39,4 +39,46 @@ ul:last-child{
 }
 img{
     width:40px;
+} */ 
+.slide{
+    width:100vw;
+    height:100vh;
+}
+.inner-wrap{
+    display:flex;
+    flex-direction:row;
+    width:400vw;
+    transform:rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    
+}
+.one{
+    background:red;
+}
+.three{
+    background:violet;
+}
+.four{
+    background:cyan;
+}
+.two{
+    background:blue;
+}
+.outer-wrap{
+        width:100vh;
+        height:100vw;
+        transform:rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        position:absolute;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+}
+*{
+    margin:0;
+    padding:0;
+}
+::-webkit-scrollbar{
+    display:none;
 }
