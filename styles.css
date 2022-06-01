@@ -1,4 +1,4 @@
-/* *,
+ *,
 *::after,
 *::before{
     margin:0;
@@ -6,18 +6,17 @@
     box-sizing: border-box;
     font-family:'ubuntu';
 }
-body{
-    margin:0;
-    padding:0;
-    display:grid;
-}
-nav>div{
-    /* position:fixed; */
-    /* background-color: #1a1a1d;
+html{
+    scroll-behavior:smooth;
 }
 nav{
     width:100%;
-} */
+    position:fixed;
+} 
+nav>ul{
+    display:flex;
+    flex-direction:row;
+}
 /* button{
     padding:.7em;
     font-family: "Ubuntu";
@@ -27,6 +26,7 @@ nav{
     border-color: #950740;
     background:none;
 }
+*/
 ul{
  list-style: none;
  display:flex;
@@ -39,11 +39,16 @@ ul:last-child{
 }
 img{
     width:40px;
-} */ 
+}
+.main-container{
+    width:100vw;
+    height:100vh;
+} 
 .slide{
     width:100vw;
     height:100vh;
 }
+/*
 .inner-wrap{
     display:flex;
     flex-direction:row;
@@ -52,6 +57,7 @@ img{
     transform-origin: top left;
     
 }
+*/
 .one{
     background:red;
 }
@@ -63,7 +69,7 @@ img{
 }
 .two{
     background:blue;
-}
+}/*
 .outer-wrap{
         width:100vh;
         height:100vw;
@@ -81,4 +87,4 @@ img{
 }
 ::-webkit-scrollbar{
     display:none;
-}
+}*/
