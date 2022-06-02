@@ -1,4 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+}
 
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+
+.inner-wrap{
+    display:flex;
+    flex-direction:row;
+    width:400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin:top left;
+}
+
+.home{
+    background:black;
+}
+.two{
+    background:red;
+}
+.three{
+    background:blue;
+}
+.four{
+    background:violet;
+}
+
+.outer-wrap{
+    width:100vh;
+    height:100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    position:absolute;
+}
 /* ::-webkit-scrollbar{
     display:none;
-} 
+} */
