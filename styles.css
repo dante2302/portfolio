@@ -64,7 +64,8 @@ ul{
 }
 li{
     list-style: none;
-    margin:15px 40px;
+    margin:0 40px;
+    padding:1em;
 }
 a{
     padding:.35em;
@@ -72,6 +73,30 @@ a{
     color:white;
     font-weight:700;
     font-size:1.4rem;
+    transition:all 0.8s ease;
+}
+a::after{
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 4px;
+	background-color: whitesmoke;
+	left: 50%;
+	bottom: -10px;
+	transition: all 0.4s ease-in-out;
+}
+a:hover a::after{
+    width: 100%;
+	left: 0;
+}
+.github:hover{
+    filter: 
+    invert(98%) 
+    sepia(75%) 
+    saturate(1%) 
+    hue-rotate(172deg) 
+    brightness(114%) 
+    contrast(100%);
 }
 .github{
     filter: 
@@ -81,6 +106,7 @@ a{
     hue-rotate(336deg) 
     brightness(77%) 
     contrast(98%);
+    transition:filter 0.4s ease;
 }
 .linkedin{
     filter: 
