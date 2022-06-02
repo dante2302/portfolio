@@ -2,7 +2,13 @@
     margin:0;
     padding:0;
 }
-
+html{
+    scroll-behavior: smooth;
+}
+/* HORIZONTAL SCROLLING */
+body{
+    font-family:'ubuntu';
+}
 .slide{
     width: 100vw;
     height: 100vh;
@@ -15,7 +21,6 @@
     transform: rotate(90deg) translateY(-100vh);
     transform-origin:top left;
 }
-
 .home{
     background:black;
 }
@@ -30,7 +35,7 @@
 }
 
 .outer-wrap{
-    width:100vh;
+    width:90vh;
     height:100vw;
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
@@ -38,6 +43,55 @@
     overflow-x:hidden;
     position:absolute;
 }
-/* ::-webkit-scrollbar{
+::-webkit-scrollbar{
     display:none;
-} */
+}
+
+img{
+    width:40px;
+}
+nav{
+    position:fixed;
+    width:100%;
+    background:#1a1a1d;
+}
+ul{
+    display:flex;
+    flex-direction:row;
+    list-style: none;
+    align-items:center;
+    justify-content:flex-end;
+}
+li{
+    list-style: none;
+    margin:15px 40px;
+}
+a{
+    padding:.35em;
+    text-decoration:none;
+    color:white;
+    font-weight:700;
+    font-size:1.4rem;
+}
+.github{
+    filter: 
+    invert(12%) 
+    sepia(93%) 
+    saturate(5761%) 
+    hue-rotate(336deg) 
+    brightness(77%) 
+    contrast(98%);
+}
+.linkedin{
+    filter: 
+    invert(12%) 
+    sepia(93%) 
+    saturate(5761%) 
+    hue-rotate(336deg) 
+    brightness(77%) 
+    contrast(98%);
+}
+.active{
+    border-bottom:2px solid #950740;
+    border-radius:6px;
+}
