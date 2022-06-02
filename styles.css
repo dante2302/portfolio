@@ -35,7 +35,7 @@ body{
 }
 
 .outer-wrap{
-    width:90vh;
+    width:88.5vh;
     height:100vw;
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
@@ -47,13 +47,16 @@ body{
     display:none;
 }
 
-img{
-    width:40px;
+nav img{
+    width:2.5rem;
 }
 nav{
     position:fixed;
     width:100%;
     background:#1a1a1d;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
 }
 ul{
     display:flex;
@@ -61,11 +64,17 @@ ul{
     list-style: none;
     align-items:center;
     justify-content:flex-end;
+    margin: 1.2em 0px;
 }
 li{
     list-style: none;
-    margin:0 40px;
-    padding:1em;
+    margin:0 20px;
+}
+.logo{
+    align-self:center;
+    justify-self:flex-end;
+    margin-inline:1em auto;
+    width:4em;
 }
 a{
     padding:.35em;
@@ -75,21 +84,18 @@ a{
     font-size:1.4rem;
     transition:all 0.8s ease;
 }
-a::after{
-    position: absolute;
-	content: "";
-	width: 0%;
-	height: 4px;
-	background-color: whitesmoke;
-	left: 50%;
-	bottom: -10px;
-	transition: all 0.4s ease-in-out;
+.github,.linkedin{
+    filter: 
+    invert(12%) 
+    sepia(93%) 
+    saturate(5761%) 
+    hue-rotate(336deg) 
+    brightness(77%) 
+    contrast(98%);
+    transition:all 0.4s ease-in;
+    cursor:pointer;
 }
-a:hover a::after{
-    width: 100%;
-	left: 0;
-}
-.github:hover{
+.github:hover,.linkedin:hover{
     filter: 
     invert(98%) 
     sepia(75%) 
@@ -98,24 +104,11 @@ a:hover a::after{
     brightness(114%) 
     contrast(100%);
 }
-.github{
-    filter: 
-    invert(12%) 
-    sepia(93%) 
-    saturate(5761%) 
-    hue-rotate(336deg) 
-    brightness(77%) 
-    contrast(98%);
-    transition:filter 0.4s ease;
+.github:hover{
+    transform: rotate(360deg) scale(1.15)
 }
-.linkedin{
-    filter: 
-    invert(12%) 
-    sepia(93%) 
-    saturate(5761%) 
-    hue-rotate(336deg) 
-    brightness(77%) 
-    contrast(98%);
+.linkedin:hover{
+    transform:scale(1.15);
 }
 .active{
     border-bottom:2px solid #950740;
