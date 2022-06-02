@@ -2,10 +2,9 @@
     margin:0;
     padding:0;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 /* HORIZONTAL SCROLLING */
+
 body{
     font-family:'ubuntu';
 }
@@ -22,7 +21,6 @@ body{
     transform-origin:top left;
 }
 .home{
-    background:black;
 }
 .two{
     background:red;
@@ -42,6 +40,7 @@ body{
     overflow-y:scroll;
     overflow-x:hidden;
     position:absolute;
+    scroll-behavior:smooth;
 }
 ::-webkit-scrollbar{
     display:none;
@@ -58,7 +57,7 @@ nav{
     flex-direction:row;
     justify-content:flex-end;
 }
-ul{
+.nav-ul{
     display:flex;
     flex-direction:row;
     list-style: none;
@@ -76,7 +75,7 @@ li{
     margin-inline:1em auto;
     width:4em;
 }
-a{
+nav a{
     padding:.35em;
     text-decoration:none;
     color:white;
@@ -113,4 +112,13 @@ a{
 .active{
     border-bottom:2px solid #950740;
     border-radius:6px;
+}
+.home{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:black;
+}
+.home h1{
+    color:white
 }
