@@ -9,17 +9,20 @@
     --pink-dark:#6f2232;
     --pink-mid:#950740;
     --pink-light:#c3073f;
+    --fs-h1:1.7rem;
     --fs-link:1.2rem;
 }
 @media(min-width:768px){
     :root{
-        --fs-link:1.4rem;
+        --fs-h1:3rem;
+        --fs-link:1.55rem;
     }
 }
 /* HORIZONTAL SCROLLING */
 
 body{
     font-family:'oswald';
+    font-weight:700;
 }
 .slide{
     width: 100vw;
@@ -135,17 +138,42 @@ nav a.active::after{
     contrast(100%);
 }
 .github:hover{
-    transform: rotate(360deg) scale(1.15)
+    transform: rotate(360deg) scale(1.1)
 }
 .linkedin:hover{
-    transform:scale(1.15);
+    transform:scale(1.1);
 }
 .home{
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
     background:black;
 }
 .home h1{
-    color:white
+    font-size:var(--fs-h1);
+    color:white;
+    left:5rem;
+    position:absolute;
+}
+.home p{
+    position:absolute;
+    color:var(--grey);
+    font-weight:700;
+    left:5rem;
+    top:20rem;
+    font-size:1.5rem;
+}
+@media(min-width:768px){
+    .home h1{
+        left:10rem;
+    }
+    .home p{
+        top:26.25rem;
+        left:10rem;
+
+    }
+}
+.home-container{
+    position:relative;
 }
