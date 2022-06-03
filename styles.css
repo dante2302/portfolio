@@ -34,9 +34,10 @@ body{
     font-family:'oswald';
     font-weight:700;
 }
-.slide{
+.section{
     width: 100vw;
     height: 100vh;
+    border:1px solid black;
 }
 
 .inner-wrap{
@@ -181,4 +182,7 @@ nav a.active::after{
 .home-bg{
     position:absolute;
     z-index:-1;
+}
+.home-accent{
+    color:var(--pink-light);
 }

@@ -8,30 +8,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <title>Darin's Portfolio</title>
 </head>
 <body>
     <nav>
         <ul class="nav-ul">
-            <li><a href="#home" class="home-link active">HOME</a>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#about">CONTACT</a></li>
+            <li><a href="#home" class="active text-link">HOME</a>
+                <li><a href="#about" class="text-link">ABOUT</a></li>
+                <li><a href="#projects" class="text-link">PROJECTS</a></li>
+                <li><a href="#about" class="text-link">CONTACT</a></li>
                 <li><img src="images/github.svg" class="github"></li>
             <li><img src="images/linkedin.svg" class="linkedin"></li>
         </ul>
     </nav>
     <div class="outer-wrap">
         <div class="inner-wrap">
-            <div class="slide home" id="home">
+            <div class="section home" id="home">
                 <div class="home-container">
-                    <h1><span style="color:#c3073f">D</span>arin Penchev <br>A Web Developer</h1>
-                    <p>More precisely, a <span style="color:#c3073f">Front-End developer</span> based in Bulgaria</p></div>
-                    <img src="endless-constellation.svg" class="home-bg">
+                    <h1>
+                        <span class="home-accent">D</span>arin Penchev 
+                        <br> A Web Developer</h1>
+                    <p>
+                        More precisely, a 
+                        <span class="home-accent">Front-End developer</span> 
+                        based in Bulgaria
+                    </p></div>
             </div>
-            <div class="slide two" id="about"></div>
-            <div class="slide three" id="projects"></div>
-            <div class="slide four"></div>
+            <div class="section about-container" id="about"></div>
+            <div class="section projects-container" id="projects"></div>
+            <div class="section contact-container" id="contact"></div>
         </div>
     </div>
 </body>
