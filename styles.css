@@ -3,6 +3,15 @@
     padding:0;
 }
 
+:root{
+    --black:#1a1a1d;
+    --grey:#4e4e50;
+    --pink-dark:#6f2232;
+    --pink-mid:#950740;
+    --pink-light:#c3073f;
+
+}
+
 /* HORIZONTAL SCROLLING */
 
 body{
@@ -46,6 +55,8 @@ body{
     display:none;
 }
 
+/* NAV */
+
 nav img{
     width:2.5rem;
 }
@@ -82,6 +93,21 @@ nav a{
     font-weight:700;
     font-size:1.4rem;
     transition:all 0.8s ease;
+    position:relative;
+}
+nav a::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    left: 0;
+    bottom:0;
+    background:var(--pink-light);
+    height:2px;
+    transition:transform .3s ease-in;
+    transform:scaleX(0)
+}
+nav a:hover::after{
+    transform:scaleX(1);
 }
 .github,.linkedin{
     filter: 
