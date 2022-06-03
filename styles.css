@@ -9,9 +9,13 @@
     --pink-dark:#6f2232;
     --pink-mid:#950740;
     --pink-light:#c3073f;
-
+    --fs-link:1.2rem;
 }
-
+@media(min-width:768px){
+    :root{
+        --fs-link:1.4rem;
+    }
+}
 /* HORIZONTAL SCROLLING */
 
 body{
@@ -42,7 +46,7 @@ body{
 }
 
 .outer-wrap{
-    width:88.5vh;
+    width:85vh;
     height:100vw;
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
@@ -63,10 +67,12 @@ nav img{
 nav{
     position:fixed;
     width:100%;
+    height:15vh;
     background:#1a1a1d;
     display:flex;
     flex-direction:row;
-    justify-content:flex-end;
+    align-items:center;
+    justify-content:center;
 }
 .nav-ul{
     display:flex;
@@ -74,24 +80,17 @@ nav{
     list-style: none;
     align-items:center;
     justify-content:flex-end;
-    margin: 1.2em 0px;
 }
 li{
     list-style: none;
     margin:0 20px;
-}
-.logo{
-    align-self:center;
-    justify-self:flex-end;
-    margin-inline:1em auto;
-    width:4em;
 }
 nav a{
     padding:.35em;
     text-decoration:none;
     color:white;
     font-weight:700;
-    font-size:1.4rem;
+    font-size:var(--fs-link);
     transition:all 0.8s ease;
     position:relative;
 }
@@ -103,11 +102,17 @@ nav a::after{
     bottom:0;
     background:var(--pink-light);
     height:2px;
-    transition:transform .3s ease-in;
+    transition:transform .28s ease-in;
     transform:scaleX(0)
 }
 nav a:hover::after{
     transform:scaleX(1);
+}
+nav a.active{
+    color:var(--pink-light)
+}
+nav a.active::after{
+    transform:scaleX(1)
 }
 .github,.linkedin{
     filter: 
@@ -134,10 +139,6 @@ nav a:hover::after{
 }
 .linkedin:hover{
     transform:scale(1.15);
-}
-.active{
-    border-bottom:2px solid #950740;
-    border-radius:6px;
 }
 .home{
     display:flex;
