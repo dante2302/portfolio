@@ -13,12 +13,11 @@
     --fs-link:1.2rem;
 }
 .home-container{
-    margin-left:2em;
     margin-bottom:5em;
 }
 @media(min-width:768px){
     :root{
-        --fs-h1:4rem;
+        --fs-h1:5.4rem;
         --fs-link:1.55rem;
     }
     .home-container{
@@ -150,7 +149,7 @@ nav a.active{
 nav a.active::after{
     transform:scaleX(1)
 }
-.github,.linkedin{
+.github,.linkedin,.youtube{
     filter: 
     invert(12%) 
     sepia(93%) 
@@ -161,7 +160,7 @@ nav a.active::after{
     transition:all 0.4s ease-in;
     cursor:pointer;
 }
-.github:hover,.linkedin:hover{
+.github:hover,.linkedin:hover, .youtube:hover{
     filter: 
     invert(98%) 
     sepia(75%) 
@@ -173,9 +172,15 @@ nav a.active::after{
 .github:hover{
     transform: rotate(360deg) scale(1.1)
 }
-.linkedin:hover{
+.linkedin:hover,.youtube:hover{
     transform:scale(1.1);
 }
+.youtube{
+    width:3rem;
+}
+
+/* Home */
+
 .home{
     line-height:1.2;
     display:flex;
@@ -215,7 +220,7 @@ nav a.active::after{
     width:100%;
     height:100%;
     transform-style:preserve-3d;
-    transition: all 0.5s ease;
+    transition: all 0.65s ease;
 }
 .front{
     width:100%;
@@ -242,6 +247,7 @@ nav a.active::after{
 .card-grid{
     display:grid;
     grid-gap:8px;
-    margin-top:2em;
+    margin-top:4em;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr;}
+    grid-template-rows:1fr 1fr;
+}
