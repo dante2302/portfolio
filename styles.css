@@ -202,19 +202,20 @@ nav a.active::after{
 
 /* Projects */
 
-.card-container{
-    width:250px;
-    height:320px;
+.card-wrap{
+    width:32vw;
+    height:35vh;
     position:relative;
     background:green;   
 }
 .card{
+    text-align:center;
+    text-justify:center;
     position:absolute;
     width:100%;
     height:100%;
     transform-style:preserve-3d;
     transition: all 0.5s ease;
-    background:blue;
 }
 .front{
     width:100%;
@@ -238,6 +239,9 @@ nav a.active::after{
     align-items:center;
     justify-content:center;
 }
-/* .card{
-    transform:rotateY(180deg)
-} */
+.card-grid{
+    display:grid;
+    grid-gap:8px;
+    margin-top:2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;}
