@@ -15,7 +15,7 @@
 .home-container{
     margin-bottom:5em;
 }
-@media(min-width:768px){
+@media(min-width:816px){
     :root{
         --fs-h1:5.4rem;
         --fs-link:1.55rem;
@@ -55,7 +55,6 @@ body{
 .section{
     width: 100vw;
     height: 100vh;
-    border:1px solid black;
     animation: onloadX .8s;
 }
 
@@ -169,12 +168,6 @@ nav a.active::after{
     brightness(114%) 
     contrast(100%);
 }
-.github:hover{
-    transform: rotate(360deg) scale(1.1)
-}
-.linkedin:hover,.youtube:hover{
-    transform:scale(1.1);
-}
 .youtube{
     width:3rem;
 }
@@ -196,6 +189,25 @@ nav a.active::after{
 .home p{
     margin-top:1em;
     color:var(--grey)
+}
+.contact-btn{
+    margin-left:5em;
+    align-self:flex-end;
+    margin-bottom:2em;
+    font-size:2rem;
+    background:var(--black);
+    color:var(--pink-light);
+    font-weight:bold;
+    border:2px solid var(--pink-light);
+    padding:.8em;
+    border-radius:2px;
+    box-shadow: inset 0 0 0 white;
+    transition:all 0.4s ease;
+}
+.contact-btn:hover{
+    box-shadow: inset 305px 0 0 white;
+    color:var(--black);
+    border:none;
 }
 .home-bg{
     position:absolute;
