@@ -1,8 +1,8 @@
 *{
     margin:0;
     padding:0;
+    text-decoration: none;
 }
-
 :root{
     --black:#1a1a1d;
     --grey:#4e4e50;
@@ -197,12 +197,13 @@ nav a.active::after{
     font-size:2rem;
     background:var(--black);
     color:var(--pink-light);
+    cursor:pointer;
     font-weight:bold;
     border:2px solid var(--pink-light);
-    padding:.8em;
+    padding:.6em;
     border-radius:2px;
     box-shadow: inset 0 0 0 white;
-    transition:all 0.4s ease;
+    transition:all 0.8s ease;
 }
 .contact-btn:hover{
     box-shadow: inset 305px 0 0 white;
