@@ -3,22 +3,22 @@ import './Header.css';
 
 export default function Header(){
     return (
-        <div id="Header">
+        <header id="Header">
             <h1 className="name">DARIN</h1>
             <h1 className="name">ROSENOV PENCHEV</h1>
-            <h2>FULLSTACK .NET ENGINEER</h2>
-            <div>
+            <h2 className="role"><span className="full">FULL</span>STACK <span className="dotnet">.NET</span> ENGINEER</h2>
+            <div className="header-button-container">
+                <NavButton
+                    styleClass="header-button"
+                    content="ABOUT ME    "
+                    navigateTo="#About"
+                />
                 <NavButton 
                     styleClass="header-button"
                     content="CONTACT ME"
                     navigateTo="#Contact"
                 />
-                <NavButton
-                    styleClass="header-button"
-                    content="ABOUT ME"
-                    navigateTo="#About"
-                />
             </div>
-        </div>
+        </header>
     )
 }
