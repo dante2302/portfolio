@@ -1,3 +1,21 @@
-.names{
+.name{
     font-weight: 900;
 }
+
+.header-button{
+    padding: 15px 30px;
+    background: black;
+    border: 2px solid black;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition:all .5s ease;
+    color: white;
+    cursor: pointer;
+}
+
+.header-button:hover{
+    background: white;
+    color: black;
+}
+

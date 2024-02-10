@@ -1,0 +1,13 @@
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    padding: 30px 15px;
+    width: 100%;
+}
+
+.nav-button{
+    color: black;
+    font-weight: 600;
+}
