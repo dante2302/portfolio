@@ -22,4 +22,21 @@ nav{
     color: purple;
 }
 
+.nav-logo{
+    width: 33px;
+    height: 33px;
+}
 
+.logo-link{
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+
+.logo-link:hover{
+    transform: rotate(360deg);
+}
+
+.adjusted-resume-logo{
+    width: 37px;
+    height: 37px;
+}
