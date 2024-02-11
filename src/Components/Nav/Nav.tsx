@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
-import "./Nav.css";
-
-import menuLogo from "../../assets/menu.svg";
 import NavBar from './NavBar';
 import NavModal from './NavModal';
+
+import { useState, useEffect } from 'react';
+
+import menuLogo from "../../assets/menu.svg";
+import closeLogo from "../../assets/close.svg";
+import "./Nav.css";
 
 export default function Nav() {
     const SCROLL_TOP_BOUNDARY = 170;
@@ -34,11 +36,18 @@ export default function Nav() {
 
     return (
       <>
-      isMobile ?
-        <button onClick={() => setModal(true)}><img src={menuLogo} className="nav-logo" /></button>
+      {isMobile 
+        ?
+        <div className="hamburger-wrap">
+          <h3>Darin.dev</h3>
+          <button className="hamburger-button" onClick={() => setModal(!isModal)}>
+            <img src={isModal ? closeLogo : menuLogo} className="nav-logo" />
+          </button>
+        </div>
         :
-          <NavBar styleClass="navBar" />
-      {isModal && <NavModal />}
+          <NavBar styleClass="nav-bar"/>
+      }
+      {isModal && <NavBar styleClass="nav-modal" />}
     </>
     )
 }
