@@ -1,4 +1,4 @@
-nav{
+.navBar{
     position: sticky;
     top: 0;
     display:flex;
@@ -9,6 +9,11 @@ nav{
     padding-right: 45px;
     width: 100%;
     transition: all .45s ease;
+}
+
+.navModal
+{
+    width: 50%;
 }
 
 .nav-button{

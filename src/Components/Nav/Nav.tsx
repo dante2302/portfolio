@@ -1,51 +1,44 @@
-import NavButton from "./NavButton";
 import { useState, useEffect } from 'react';
 import "./Nav.css";
-import githubLogo from "../../assets/github.svg";
-import linkedInLogo from "../../assets/Linkedin_logo.svg";
-import resumeLogo from "../../assets/pdf-round.svg";
-import resume from "../../assets/cv.pdf";
+
+import menuLogo from "../../assets/menu.svg";
+import NavBar from './NavBar';
+import NavModal from './NavModal';
 
 export default function Nav() {
-    const SCROLL_TOP_BOUNDARY = 320;
+    const SCROLL_TOP_BOUNDARY = 170;
+    const DEVICE_WIDTH_BOUNDARY = 768;
+
     const [scrollTop, setScrollTop] = useState(0);
+    const [isModal, setModal] = useState(false);
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < DEVICE_WIDTH_BOUNDARY);
 
     useEffect(() => {
-      const handleScroll = (event: Event) => {
+
+      function handleScroll(event: Event){
         setScrollTop(window.scrollY);
-      };
+      }
+
+      function handleResize(){
+        setIsMobile(window.innerWidth < DEVICE_WIDTH_BOUNDARY);
+      }
   
       window.addEventListener('scroll', handleScroll);
+      window.addEventListener("resize", handleResize);
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
-      };
+      }
     }, []);
+
     return (
-      <nav className={scrollTop > SCROLL_TOP_BOUNDARY ? "bg-white" : ""}>
-        <NavButton
-          styleClass="nav-button"
-          content="Home"
-          navigateTo="#"
-        />
-        <NavButton
-          styleClass="nav-button"
-          content="About"
-          navigateTo="#About"
-        />
-        <NavButton
-          styleClass="nav-button"
-          content="Projects"
-          navigateTo="#Projects"
-        />
-        <NavButton
-          styleClass="nav-button"
-          content="Contact"
-          navigateTo="#Contact"
-        />
-        <a className="logo-link" href="https://github.com/dante2302" target="_blank"><img src={githubLogo} className="nav-logo" /></a>
-        <a className="logo-link" href="https://www.linkedin.com/in/darinpenchev/" target="_blank"><img src={linkedInLogo} className="nav-logo" /></a>
-        <a className="logo-link" href={resume} target="_blank"><img src={resumeLogo} className="nav-logo adjusted-resume-logo"/></a>
-      </nav>
+      <>
+      isMobile ?
+        <button onClick={() => setModal(true)}><img src={menuLogo} className="nav-logo" /></button>
+        :
+          <NavBar styleClass="navBar" />
+      {isModal && <NavModal />}
+    </>
     )
 }
