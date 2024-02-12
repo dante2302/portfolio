@@ -39,13 +39,12 @@ export default function Nav() {
       {isMobile 
         ?
         <div className="hamburger-wrap">
-          <h3>Darin.dev</h3>
           <button className="hamburger-button" onClick={() => setModal(!isModal)}>
             <img src={isModal ? closeLogo : menuLogo} className="nav-logo" />
           </button>
         </div>
         :
-          <NavBar styleClass="nav-bar"/>
+          <NavBar styleClass={`nav-bar ${scrollTop > SCROLL_TOP_BOUNDARY  ? "scrolled" : ""}`}/>
       }
       {isModal && <NavBar styleClass="nav-modal" />}
     </>

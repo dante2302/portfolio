@@ -11,6 +11,10 @@
     transition: all .45s ease;
 }
 
+.nav-bar.scrolled{
+    background: #EEEEEE;
+    border-bottom: 1px solid black;
+}
 .nav-modal
 {
   width: 100vw;
