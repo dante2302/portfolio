@@ -38,6 +38,7 @@ export default function ContactForm()
 
     return(
         <form className="contact-form">
+            <h3>Contact</h3>
             <div className="names-container">
                 <div className="input-container">
                     <label htmlFor="firstName">First Name</label>
@@ -83,7 +84,7 @@ export default function ContactForm()
                 onChange={changeHandler}
             ></textarea>
             </div>
-            <button>Submit</button>
+            <button className="contact-submit">Submit</button>
         </form>
     )
 }

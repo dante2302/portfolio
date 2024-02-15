@@ -9,6 +9,11 @@
     gap: 20px;
 }
 
+.contact-form>h3{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
 .input-container{
     gap: 6px;
 }
@@ -24,17 +29,76 @@
 }
 
 .input-container>input{
-    padding: 5px;
+    padding: 8px;
+    box-shadow: 27px 25px 39px -14px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 27px 25px 39px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 27px 25px 39px -14px rgba(0, 0, 0, 0.75);
     border: none;
     border-radius: 5px;
+}
+
+.input-container>label{
+    color: white;
+    font-weight: 500;
+}
+
+input:focus, textarea:focus{
+    outline: 2px solid purple;
+}
+
+.contact-submit{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    background: hsla(289, 81%, 27%, 1);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    background: hsla(289, 76%, 43%, 1);
+
+    background: linear-gradient(90deg, hsla(289, 76%, 43%, 1) 0%, hsla(357, 90%, 79%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(289, 76%, 43%, 1) 0%, hsla(357, 90%, 79%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(289, 76%, 43%, 1) 0%, hsla(357, 90%, 79%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A21AC1", endColorstr="#FA9BA0", GradientType=1 );
+}
+
+.contact-submit:hover{
+    cursor: pointer;
+    outline:2px solid white; 
 }
 
 .names-container>div{
     width: 50%;
 }
+
 textarea{
     resize: none;
-    padding-bottom: 100px;
+    padding: 10px 10px 100px 10px;
     border: none;
     border-radius: 5px;
+}
+
+.outer-contact-wrap{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    background-color: #6C6D6C;
+}
+
+.inner-contact-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 30px;
+    border-radius: 12px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.contact-info-container{
+    background-color: #323232;
 }

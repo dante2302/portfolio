@@ -9,8 +9,8 @@ function App() {
       <Nav />
       <div className="outer-wrap">
         <Header />
-        <Contact />
       </div>
+      <Contact />
     </div>
   )
 }
