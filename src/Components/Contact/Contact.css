@@ -9,11 +9,7 @@
     gap: 20px;
 }
 
-.contact-form>h3{
-    color: white;
-    font-weight: 600;
-    font-size: 30px;
-}
+
 .input-container{
     gap: 6px;
 }
@@ -85,6 +81,10 @@ textarea{
     padding-top: 80px;
     padding-bottom: 30px;
     background-color: #6C6D6C;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner-contact-wrap{
@@ -95,10 +95,15 @@ textarea{
     padding: 30px;
     border-radius: 12px;
     justify-content: center;
-    margin: 0 auto;
 }
 
 
 .contact-info-container{
     background-color: #323232;
+}
+
+.contact-info-container>h3{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
 }
