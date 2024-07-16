@@ -1,7 +1,7 @@
 import Contact from "./Contact/Contact";
 import Header from "./Header/Header";
 import Nav from "./Nav/Nav"
-// import Projects from "./Projects/Projects";
+import Projects from "./Projects/Projects";
 import "./styles.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Nav />
       <div className="outer-wrap">
         <Header />
-        {/* <Projects /> */}
+        <Projects />
       </div>
       <Contact />
     </div>

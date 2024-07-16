@@ -1,7 +1,7 @@
-import githubLogo from "../../assets/github.svg";
+import { PropsWithChildren } from "react";
 import "./Projects.css";
 
-interface props
+interface Project  
 {
     paragraph: string,
     heading: string,
@@ -11,34 +11,48 @@ interface props
     technologies: string[]
 }
 
-export default function ProjectTemplate({
-    heading, 
-    paragraph,
-    githubLink, 
-    seeLiveLink,
-    imageLink,
-    technologies
-}: props)
+interface props extends PropsWithChildren
 {
+    project: Project,
+}
+
+export default function ProjectTemplate({ project, children }: props)
+{
+    const { 
+        imageLink, 
+        heading, 
+        technologies, 
+        paragraph, 
+        seeLiveLink, 
+        githubLink 
+    } = project;
+
     return (
         <div className="project-outer">
-                <img src={imageLink} className="project-img"/>
+                <img src={imageLink} className="project-img" onClick={() => window.open(seeLiveLink)}/>
             <div className="text-content">
                 <h1>{heading}</h1>
-                <p>{paragraph}</p>
                 <ul className="technologies">
                     {technologies.map(t => 
-                        <li key="t">{t}</li>
+                        <li key={t}>{t}</li>
                     )}
                 </ul>
-                <a className="see-live-button" href={seeLiveLink}>See Live</a>
+                <p>
+                    {paragraph}
+                    {children}
+                </p>
+                <div className="project-link-container">
+                <a 
+                    className="project-link" 
+                    href={seeLiveLink} 
+                    target="_blank"
+                >See Live</a>
                 <a
-                    className="logo-link"
+                    className="project-link source-code-link"
                     href={githubLink}
                     target="_blank"
-                >
-                    <img src={githubLogo} className="nav-logo" />
-                </a>
+                >Source Code</a>
+                </div>
             </div>
         </div>
     )
