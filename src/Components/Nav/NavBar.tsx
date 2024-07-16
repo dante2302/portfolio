@@ -37,13 +37,13 @@ export default function NavBar({ styleClass, children, closeModal }: props) {
 
   function handleScrollClick(elementScroll: number){
     closeModal && closeModal();
-    window.scrollTo(0, elementScroll + scrollTop);
+    window.scrollTo(0, elementScroll + scrollTop - 100);
   }
   return (
     <nav className={styleClass || `nav-bar ${scrollTop > SCROLL_TOP_BOUNDARY  ? "scrolled" : ""}`}>
       {children}
       <div className="internal-link-container">
-        <a className="nav-button" onClick={() => { handleScrollClick(-window.scrollY) }}>Home</a>
+        <a className="nav-button" onClick={() => { handleScrollClick(-window.scrollY + 80) }}>Home</a>
         <a className="nav-button" onClick={() => { handleScrollClick(aboutScroll) }} >About</a>
         <a className="nav-button" onClick={() => { handleScrollClick(projectsScroll) }}>Projects</a>
         <a className="nav-button" onClick={() => { handleScrollClick(contactScroll) }}>Contact</a>

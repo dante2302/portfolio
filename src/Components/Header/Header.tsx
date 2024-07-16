@@ -9,7 +9,7 @@ export default function Header(){
 {/* <span className="full">FULL</span>STACK  */}
             <div className="header-button-container">
                 <a className='header-button' href="#About">ABOUT ME</a>
-                <a className='header-button' href="#Contact">CONTACT ME</a>
+                <a className='header-button' onClick={() => window.scrollTo(0, document.body.offsetHeight)}>CONTACT ME</a>
             </div>
         </header>
     )

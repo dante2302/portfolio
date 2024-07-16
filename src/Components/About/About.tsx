@@ -6,6 +6,7 @@ import html from "../../assets/html5.svg";
 
 import csharp from "../../assets/csharp.svg";
 import dotnet from "../../assets/dotnet.svg";
+import azure from "../../assets/azure.svg";
 import postgres from "../../assets/postgres.svg";
 import sqlserver from "../../assets/sqlserver.svg";
 import git from "../../assets/git.svg";
@@ -17,17 +18,22 @@ export default function About()
     return(
         <div id="About">
             <h1>ABOUT ME</h1>
-            <p>
-                My name is Darin Penchev. I'm a .NET developer based in Varna, Bulgaria.
-                <br></br>
-                I Specialize in building .NET Web API solutions and React + Typescript Applications.
-                 Whether it's architecting backend services or crafting interactive frontend experiences, I am dedicated to delivering solutions that drive innovation and meet the unique needs of each project.
-            </p>
+            <div className="p-div">
+                <p>
+                    My name is Darin Penchev. I'm a <b>.NET</b> developer based in Varna, Bulgaria.
+                    <br></br>
+                    I Specialize in building <b>.NET Web API</b> solutions and <b>React + Typescript</b> Applications.
+                    <br></br>
+                    At the moment I'm pursuing a <b>Bachelor's degree</b> in Software And Internet Technologies at <b>Technical University Varna</b>
+                </p>
+                <a className="header-button" href="">RESUME</a>
+            </div>
             <div className="technology-div">
                 <h2>Technologies I'm proficient in: </h2>
                 <ul>
                     <li><img src={csharp} alt="C#"/></li>
                     <li><img src={dotnet} alt=".NET"/></li>
+                    <li><img src={azure} alt="Azure" /></li>
                     <li><img src={html} alt="HTML" /></li>
                     <li><img src={css} alt="CSS" /></li>
                     <li><img src={javascript} alt="JavaScript" /></li>

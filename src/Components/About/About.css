@@ -11,16 +11,29 @@
     text-align: center;
     margin-bottom: 30px;
 }
-#About>p{
+#About>.p-div{
+    display: flex;
+    flex-direction: column;
     grid-area: b;
-    font-size: 18px;
-    padding: 25px;
-    padding-top: 30px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background: white;
     border-right: 1px solid lightgrey;
     height: 100%;
+    padding: 25px;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+.p-div>p{
+    font-size: 16px;
+}
+.header-button{
+    width: fit-content;
+    text-align: center;
+}
+
+#About>p{
+    font-size: 18px;
 }
 
 .technology-div{
