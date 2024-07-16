@@ -67,11 +67,11 @@
 
 .logo-link{
     cursor: pointer;
-    transition: all .5s ease-in;
+    transition: all .1s ease-in;
 }
 
 .logo-link:hover{
-    transform: rotate(360deg);
+    transform: scale(1.1);
 }
 
 .adjusted-resume-logo{

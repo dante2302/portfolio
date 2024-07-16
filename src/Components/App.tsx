@@ -10,6 +10,7 @@ function App() {
       <Nav />
       <div className="outer-wrap">
         <Header />
+        <div id="About"></div>
         <Projects />
       </div>
       <Contact />
