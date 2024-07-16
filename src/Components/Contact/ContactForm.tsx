@@ -11,6 +11,8 @@ export default function ContactForm()
 {
 
     const [formState, setFormState] = useState(initialFormState);
+    const [errorState, setErrorState] = useState("");
+
     function changeHandler(e: any){
         ;
         setFormState((state) => (
@@ -18,22 +20,17 @@ export default function ContactForm()
         ))
     }
 
-    function onSubmit(){
-
-    }
-
-    function validateEmail(email: string){ 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        const emailErrorMessage = 'Invalid Email'
-        if (emailRegex.test(email)) return ''
-        return emailErrorMessage
-
-        //  Valid emails consist of : 
-        // - Atleast one character before @
-        // - One @ symbol
-        // - Atleast one character after @
-        // - Atleast one .
-        // - Atleast one character after .
+    async function onSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        e.preventDefault();
+        const response = await fetch("http://localhost:5183/send", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formState),
+            mode: "cors"
+        })
+        console.log(response);
     }
 
     return(
@@ -83,7 +80,7 @@ export default function ContactForm()
                 onChange={changeHandler}
             ></textarea>
             </div>
-            <button className="contact-submit">Submit</button>
+            <button className="contact-submit" onClick={(e) => onSubmit(e)}>Submit</button>
         </form>
     )
 }
