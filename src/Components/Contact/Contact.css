@@ -21,7 +21,8 @@
 .names-container{
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 100px;
+    justify-content: space-between;
 }
 
 .input-container>input{
@@ -31,6 +32,7 @@
     -moz-box-shadow: 27px 25px 39px -14px rgba(0, 0, 0, 0.75);
     border: none;
     border-radius: 5px;
+    width: 100%;
 }
 
 .input-container>label{
@@ -55,6 +57,11 @@ input:focus, textarea:focus{
 .contact-submit:hover{
     cursor: pointer;
     outline:2px solid white; 
+}
+
+.contact-submit:disabled{
+    background: grey;
+    color: lightgray
 }
 
 .names-container>div{
@@ -83,7 +90,7 @@ textarea{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 50%;
     border-radius: 12px;
     justify-content: center;
 }
@@ -104,4 +111,29 @@ textarea{
     font-weight: 600;
     margin-bottom: 10px;
     font-size: 30px;
+}
+
+.contact-submit-success, .contact-submit-fail{
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+.contact-submit-success{
+
+    color: #0e9e21;
+}
+
+.contact-submit-fail{
+    color: red;
+}
+.contact-submit-success>img, .contact-submit-fail>img
+{
+    width: 30px;
+    height: 30px;
 }
