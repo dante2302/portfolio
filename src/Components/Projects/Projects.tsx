@@ -17,7 +17,7 @@ export default function Projects()
         imageLink: bakeryImg,
         heading: "Bobby's bakery",
         paragraph: "Bobby's bakery website is a complete platform designed to make running a bakery easier.\nIt's a personal assignment project, made for a relative.",
-        technologies: [".NET", "EF Core" , "PostgreSQL", "Azure", "TypeScript", "React"],
+        technologies: [".NET", "EF Core" , "PostgreSQL", "Azure", "TypeScript", "React", "SASS"],
         githubLink: "https://github.com/dante2302/bakery",
         seeLiveLink: "https://bakery-six-amber.vercel.app"
     }

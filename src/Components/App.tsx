@@ -1,3 +1,4 @@
+import About from "./About/About";
 import Contact from "./Contact/Contact";
 import Header from "./Header/Header";
 import Nav from "./Nav/Nav"
@@ -10,7 +11,7 @@ function App() {
       <Nav />
       <div className="outer-wrap">
         <Header />
-        <div id="About"></div>
+        <About />
         <Projects />
       </div>
       <Contact />

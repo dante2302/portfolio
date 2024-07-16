@@ -46,19 +46,10 @@ input:focus, textarea:focus{
     border: none;
     border-radius: 10px;
     padding: 5px 20px;
-    background: hsla(289, 81%, 27%, 1);
+    background: linear-gradient(to left, purple 50%, rgb(151, 69, 151));
     color: white;
     font-size: 16px;
     font-weight: 600;
-    background: hsla(289, 76%, 43%, 1);
-
-    background: linear-gradient(90deg, hsla(289, 76%, 43%, 1) 0%, hsla(357, 90%, 79%, 1) 100%);
-    
-    background: -moz-linear-gradient(90deg, hsla(289, 76%, 43%, 1) 0%, hsla(357, 90%, 79%, 1) 100%);
-    
-    background: -webkit-linear-gradient(90deg, hsla(289, 76%, 43%, 1) 0%, hsla(357, 90%, 79%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A21AC1", endColorstr="#FA9BA0", GradientType=1 );
 }
 
 .contact-submit:hover{
@@ -85,6 +76,7 @@ textarea{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .inner-contact-wrap{
@@ -92,7 +84,6 @@ textarea{
     flex-direction: column;
     align-items: center;
     width: 40%;
-    padding: 30px;
     border-radius: 12px;
     justify-content: center;
 }
@@ -100,10 +91,17 @@ textarea{
 
 .contact-info-container{
     background-color: #323232;
+    padding: 20px;
+    color: white;
+    width: 20%;
+    height: 100%;
+    align-self: start;
+    font-size: 20px;
+    border-radius: 15px;
 }
 
 .contact-info-container>h3{
-    color: white;
     font-weight: 600;
+    margin-bottom: 10px;
     font-size: 30px;
 }

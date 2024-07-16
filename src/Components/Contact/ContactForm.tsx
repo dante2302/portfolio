@@ -78,7 +78,7 @@ export default function ContactForm()
             <label htmlFor="message">Message</label>
             <textarea
                 id="message"
-                name="email"
+                name="message"
                 value={formState.message}
                 onChange={changeHandler}
             ></textarea>
