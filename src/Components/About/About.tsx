@@ -10,30 +10,32 @@ import postgres from "../../assets/postgres.svg";
 import sqlserver from "../../assets/sqlserver.svg";
 import git from "../../assets/git.svg";
 
-import "About.css";
+import "./About.css";
 
 export default function About()
 {
     return(
         <div id="About">
+            <h1>ABOUT ME</h1>
             <p>
                 My name is Darin Penchev. I'm a .NET developer based in Varna, Bulgaria.
                 <br></br>
                 I Specialize in building .NET Web API solutions and React + Typescript Applications.
+                 Whether it's architecting backend services or crafting interactive frontend experiences, I am dedicated to delivering solutions that drive innovation and meet the unique needs of each project.
             </p>
             <div className="technology-div">
                 <h2>Technologies I'm proficient in: </h2>
                 <ul>
-                    <li><img src={react} alt="React"/></li>
-                    <li><img src={javascript} alt="JavaScript" /></li>
                     <li><img src={csharp} alt="C#"/></li>
                     <li><img src={dotnet} alt=".NET"/></li>
+                    <li><img src={html} alt="HTML" /></li>
+                    <li><img src={css} alt="CSS" /></li>
+                    <li><img src={javascript} alt="JavaScript" /></li>
+                    <li><img src={typescript} alt="TypeScript" /></li>
+                    <li><img src={react} alt="React"/></li>
                     <li><img src={postgres} alt="PostgreSQL"/></li>
                     <li><img src={sqlserver} alt="SQL Server"/></li>
                     <li><img src={git} alt="Git" /></li>
-                    <li><img src={html} alt="HTML" /></li>
-                    <li><img src={css} alt="CSS" /></li>
-                    <li><img src={typescript} alt="TypeScript" /></li>
                 </ul>
             </div>
         </div>
