@@ -1,5 +1,4 @@
 import NavBar from './NavBar';
-import NavModal from './NavModal';
 
 import { useState, useEffect } from 'react';
 
@@ -44,9 +43,10 @@ export default function Nav() {
           </button>
         </div>
         :
-          <NavBar styleClass={`nav-bar ${scrollTop > SCROLL_TOP_BOUNDARY  ? "scrolled" : ""}`}/>
+          <NavBar 
+          styleClass={`nav-bar ${scrollTop > SCROLL_TOP_BOUNDARY  ? "scrolled" : ""}`}/>
       }
-      {isModal && <NavBar styleClass="nav-modal" />}
+      {isModal && <NavBar styleClass="nav-modal" closeModal={() => setModal(false)}/>}
     </>
     )
 }

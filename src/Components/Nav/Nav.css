@@ -3,18 +3,25 @@
     top: 0;
     display:flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     gap: 45px;
-    padding-block: 20px;
-    padding-right: 45px;
+    padding: 20px 60px;
     width: 100%;
     transition: all .45s ease;
+}
+
+.nav-bar>div, .nav-modal>div{
+    display: flex;
+   gap: 15px; 
+   justify-content: center;
+   align-items: center;
 }
 
 .nav-bar.scrolled{
     background: #EEEEEE;
     border-bottom: 1px solid black;
 }
+
 .nav-modal
 {
   width: 100vw;
@@ -33,11 +40,13 @@
     color: black;
     font-weight: 600;
     transition: all .2s ease;
+    cursor: pointer;
 }
 
 .hamburger-button{
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .hamburger-wrap{
@@ -68,4 +77,11 @@
 .adjusted-resume-logo{
     width: 37px;
     height: 37px;
+}
+
+@media(max-width: 768px)
+{
+    .internal-link-container{
+        flex-direction: column;
+    }
 }
