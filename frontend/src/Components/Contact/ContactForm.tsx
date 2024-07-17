@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "./Contact.css";
-import {  Hourglass } from "react-loader-spinner";
+import { Hourglass } from "react-loader-spinner";
 import cross from "../../assets/cross.svg";
 import tick from "../../assets/tick.svg";
 
@@ -28,9 +28,9 @@ export default function ContactForm() {
 
     async function onSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
-        try{
+        try {
             setLoading(true);
-            const response = await fetch("", {
+            const response = await fetch("portfolio-backend-d.azurewebsites.net", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,20 +41,18 @@ export default function ContactForm() {
             setFormState(initialFormState);
             setShowResponse(true);
             setSubmitResponse(response.ok);
-            console.log(response)
         }
-        catch(er){
-           console.log(er) 
-           setShowResponse(true)
-           setSubmitResponse(false)
+        catch (er) {
+            console.log(er)
+            setShowResponse(true)
+            setSubmitResponse(false)
         }
-        finally{
+        finally {
             setLoading(false)
         }
     }
     useEffect(() => {
-        if(Object.values(formState).every(s => s.length != 0))
-        {
+        if (Object.values(formState).every(s => s.length != 0)) {
             setDisabled(false);
         }
         else setDisabled(true);
@@ -107,24 +105,24 @@ export default function ContactForm() {
                     onChange={changeHandler}
                 ></textarea>
             </div>
-            <button 
-                className="contact-submit" 
+            <button
+                className="contact-submit"
                 disabled={disabled}
-                onClick={(e) => {setShowResponse(false) ; onSubmit(e)}}
-            >{isLoading ? <Hourglass colors={["white", "white"]} height={20} width={20}/> : "Submit"}</button>
+                onClick={(e) => { setShowResponse(false); onSubmit(e) }}
+            >{isLoading ? <Hourglass colors={["white", "white"]} height={20} width={20} /> : "Submit"}</button>
             {showResponse &&
                 (
                     submitResponse ?
-                    <div className="contact-submit-success">
-                        <img src={tick} />
-                        <p >Your message was sent successfully.</p>
-                    </div>
+                        <div className="contact-submit-success">
+                            <img src={tick} />
+                            <p >Your message was sent successfully.</p>
+                        </div>
                         :
-                    <div className="contact-submit-fail">
-                        <img src={cross} />
-                        <p >Something went wrong. Your message was not sent successfully</p>
-                    </div>
-            )
+                        <div className="contact-submit-fail">
+                            <img src={cross} />
+                            <p >Something went wrong. Your message was not sent successfully</p>
+                        </div>
+                )
             }
         </form>
     )

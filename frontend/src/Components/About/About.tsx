@@ -26,7 +26,7 @@ export default function About()
                     <br></br>
                     At the moment I'm pursuing a <b>Bachelor's degree</b> in Software And Internet Technologies at <b>Technical University Varna</b>
                 </p>
-                <a className="header-button" href={resume}>RESUME</a>
+                <a className="header-button" href={resume} target="_blank">RESUME</a>
             </div>
             <div className="technology-div">
                 <h2>Technologies I'm proficient in: </h2>
