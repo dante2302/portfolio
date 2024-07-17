@@ -30,7 +30,7 @@ export default function ContactForm() {
         e.preventDefault();
         try {
             setLoading(true);
-            const response = await fetch("https://portfolio-backend-d.azurewebsites.net", {
+            const response = await fetch("https://portfolio-backend-d.azurewebsites.net/send", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
