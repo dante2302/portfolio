@@ -9,15 +9,15 @@ export default function Projects()
         imageLink: aetherImg,
         heading: "Aether",
         paragraph: "Aether is a live online platform where people can join communities based on their interests to share and discuss content. Users can create posts, rate them, and even comment and have discussions on them.\nEverything is managed entirely on the .NET backend, hosted on Azure. On the frontend, Aether's got an easy-to-use interface and dynamic styling.",
-        technologies: [".NET", "PostgreSQL", "Azure" , "JavaScript", "React", "LinkPreviewAPI"],
+        technologies: [".NET", "PostgreSQL", "Azure" , "HTML", "CSS", "JavaScript", "React", "LinkPreviewAPI"],
         githubLink: "https://github.com/dante2302/aether",
         seeLiveLink: "https://aether-zeta.vercel.app/"
     }
     const bakery = {
         imageLink: bakeryImg,
-        heading: "Bobby's bakery",
-        paragraph: "Bobby's bakery website is a complete platform designed to make running a bakery easier.\nIt's a personal assignment project, made for a relative.",
-        technologies: [".NET", "EF Core" , "PostgreSQL", "Azure", "TypeScript", "React", "SASS"],
+        heading: "Bobby's Bakery",
+        paragraph: "Bobby's Bakery website is a complete platform designed to make running a bakery easier.\nIt's a personal assignment project, made for a relative.",
+        technologies: [".NET", "EF Core" , "PostgreSQL", "Azure", "HTML", "CSS/SCSS", "TypeScript", "React", ],
         githubLink: "https://github.com/dante2302/bakery",
         seeLiveLink: "https://bakery-six-amber.vercel.app"
     }

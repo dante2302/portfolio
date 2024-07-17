@@ -10,7 +10,7 @@ import azure from "../../assets/azure.svg";
 import postgres from "../../assets/postgres.svg";
 import sqlserver from "../../assets/sqlserver.svg";
 import git from "../../assets/git.svg";
-
+import resume from "../../assets/cv.pdf";
 import "./About.css";
 
 export default function About()
@@ -26,7 +26,7 @@ export default function About()
                     <br></br>
                     At the moment I'm pursuing a <b>Bachelor's degree</b> in Software And Internet Technologies at <b>Technical University Varna</b>
                 </p>
-                <a className="header-button" href="">RESUME</a>
+                <a className="header-button" href={resume}>RESUME</a>
             </div>
             <div className="technology-div">
                 <h2>Technologies I'm proficient in: </h2>

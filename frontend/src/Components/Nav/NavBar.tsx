@@ -29,6 +29,7 @@ export default function NavBar({ styleClass, children, closeModal }: props) {
       setProjectsScroll(projects.getBoundingClientRect().top);
       setContactScroll(contact.getBoundingClientRect().top);
     }
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
   }, []);
 
@@ -39,6 +40,7 @@ export default function NavBar({ styleClass, children, closeModal }: props) {
     closeModal && closeModal();
     window.scrollTo(0, elementScroll + scrollTop - 100);
   }
+
   return (
     <nav className={styleClass || `nav-bar ${scrollTop > SCROLL_TOP_BOUNDARY  ? "scrolled" : ""}`}>
       {children}

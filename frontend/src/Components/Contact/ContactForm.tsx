@@ -30,7 +30,7 @@ export default function ContactForm() {
         e.preventDefault();
         try{
             setLoading(true);
-            const response = await fetch("http://localhost:5183/send", {
+            const response = await fetch("", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -45,6 +45,8 @@ export default function ContactForm() {
         }
         catch(er){
            console.log(er) 
+           setShowResponse(true)
+           setSubmitResponse(false)
         }
         finally{
             setLoading(false)

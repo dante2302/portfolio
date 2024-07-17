@@ -36,7 +36,8 @@
 
 @media(min-width: 768px){
     header {
-        margin-block: 105px;
+        margin-top: 105px;
+        margin-bottom: 100px;
     }
     .header-button{
         width: auto;
@@ -58,14 +59,14 @@
 
 
 .dotnet{
-    color: purple;
+    color: rgb(185, 10, 185);
 }
 
 .full{
     color: #f8e450;
 }
 
-.full{
+.full, .dotnet{
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
