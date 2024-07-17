@@ -1,5 +1,5 @@
-using System.Net;
-using System.Net.Mail;
+using MailKit.Net.Smtp;
+using MimeKit;
 
 public class EmailService()
 {
@@ -13,20 +13,19 @@ public class EmailService()
         if(sender is null || password is null || server is null || receiver is null)
             throw new InvalidOperationException("Invalid config");
 
-        var client = new SmtpClient(server, 587)
+        var emailMessage = new MimeMessage();
+        emailMessage.From.Add(new MailboxAddress("Porfolio B", sender));
+        emailMessage.To.Add(new MailboxAddress("D", receiver));
+        emailMessage.Body = new TextPart("plain")
         {
-            EnableSsl = true,
-            UseDefaultCredentials = false,
-            Credentials = new NetworkCredential(sender, password),
+            Text = $"{einfo.FirstName} {einfo.LastName}\n{einfo.Message}\nContact at: {einfo.Email}"
         };
 
-        await client.SendMailAsync(
-            new MailMessage(
-                from: sender,
-                to: receiver,
-                subject: $"{einfo.FirstName} {einfo.LastName}",
-                body: $"{einfo.Message}\n Contact at: {einfo.Email}"
-            ));
+        using var client = new SmtpClient();
+        await client.ConnectAsync(server, 587);
+        await client.AuthenticateAsync(sender, password);
+        await client.SendAsync(emailMessage);
+        await client.DisconnectAsync(true);
         return;
     }
 }
