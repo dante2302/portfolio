@@ -38,7 +38,6 @@ export default function Nav({scrollTop}: {scrollTop: number}) {
         :
           <NavBar 
           styleClass={scrollTop > SCROLL_TOP_BOUNDARY ? 'nav-bar scrolled' : ''}
-          isModal={isModal}
           closeModal={() => setModal(false)}
           />
       }
@@ -46,7 +45,6 @@ export default function Nav({scrollTop}: {scrollTop: number}) {
         <NavBar 
         styleClass="nav-modal" 
         closeModal={() => setModal(false)} 
-        isModal={isModal} 
         />
       }
     </>
