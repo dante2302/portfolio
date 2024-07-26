@@ -22,12 +22,7 @@ export default function NavBar({ styleClass, children, closeModal }: props) {
         }}>Home</a>
         <a className="nav-button" href="#About" onClick={() => closeModal && closeModal()}>About</a>
         <a className="nav-button" href="#Projects" onClick={() => closeModal && closeModal()}>Projects</a>
-        <a className="nav-button" onClick={() => {
-          closeModal && closeModal()
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-          });
-        }}>Contact</a>
+        <a className="nav-button" href="#Contact" onClick={() => closeModal && closeModal()}>Contact</a>
       </div>
       <div>
         <a className="logo-link" href="https://github.com/dante2302" target="_blank"><img src={githubLogo} className="nav-logo" /></a>

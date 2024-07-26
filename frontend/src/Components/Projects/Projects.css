@@ -1,5 +1,4 @@
 #Projects {
-    padding-top: 35px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -10,7 +9,7 @@
 }
 
 #Projects::before {
-    margin-top: 35px;
+    margin-block: 35px;
     content: "";
     display: block;
     border: 1px solid black;
@@ -112,14 +111,14 @@
         padding-right: 0;
     }
     .text-content>p{
-        font-size: 13px;
+        font-size: 14px;
         grid-template-rows: 15% 40% 55% 10%;
     }
     .text-content>h1{
         font-size: 25px;
     }
     .technologies>li{
-        font-size: 12px;
+        font-size: 13px;
     }
     .text-content{
         display: flex;
