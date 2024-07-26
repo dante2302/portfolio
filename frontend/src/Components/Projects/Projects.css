@@ -1,4 +1,5 @@
 #Projects {
+    padding-top: 35px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -9,6 +10,7 @@
 }
 
 #Projects::before {
+    margin-top: 35px;
     content: "";
     display: block;
     border: 1px solid black;
