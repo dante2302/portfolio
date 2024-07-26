@@ -2,11 +2,10 @@ import githubLogo from "../../assets/github.svg";
 import linkedInLogo from "../../assets/Linkedin_logo.svg";
 import resumeLogo from "../../assets/pdf-round.svg";
 import resume from "../../assets/cv.pdf";
-import { PropsWithChildren, useEffect, useState } from "react";
+import { PropsWithChildren, useEffect } from "react";
 
 interface props extends PropsWithChildren{
     styleClass: string,
-    isModal: boolean,
     closeModal?: () => void,
 }
 
