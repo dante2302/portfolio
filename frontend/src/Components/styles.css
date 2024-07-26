@@ -17,6 +17,9 @@ ul, ol{
     font-family: Roboto;
 }
 
+.noscroll{
+    scroll-behavior: none;
+}
 .canvas{
     width: 100%;
     background-color: #EEEEEE;

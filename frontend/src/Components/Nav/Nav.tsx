@@ -6,8 +6,9 @@ import menuLogo from "../../assets/menu.svg";
 import closeLogo from "../../assets/close.svg";
 import "./Nav.css";
 
-export default function Nav() {
+export default function Nav({scrollTop}: {scrollTop: number}) {
     const DEVICE_WIDTH_BOUNDARY = 768;
+    const SCROLL_TOP_BOUNDARY = 170;
 
     const [isModal, setModal] = useState(false);
 
@@ -20,6 +21,11 @@ export default function Nav() {
     window.addEventListener('resize', handleResize);
   }, [])
 
+  useEffect(() => {
+    isModal && document.body.classList.add("noscroll");
+    return () => document.body.classList.remove("noscroll");
+  }, [isModal])
+
     return (
       <>
       {isMobile 
@@ -31,11 +37,18 @@ export default function Nav() {
         </div>
         :
           <NavBar 
-          styleClass=''
+          styleClass={scrollTop > SCROLL_TOP_BOUNDARY ? 'nav-bar scrolled' : ''}
+          isModal={isModal}
           closeModal={() => setModal(false)}
           />
       }
-      {isModal && <NavBar styleClass="nav-modal" closeModal={() => setModal(false)}/>}
+      {isModal && 
+        <NavBar 
+        styleClass="nav-modal" 
+        closeModal={() => setModal(false)} 
+        isModal={isModal} 
+        />
+      }
     </>
     )
 }

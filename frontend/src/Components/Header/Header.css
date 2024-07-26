@@ -8,7 +8,9 @@
 .role {
     font-size: 25px;
 }
-
+header{
+    margin-block: 30px;
+}
 .header-button{
     padding: 10px 15px;
     background: black;

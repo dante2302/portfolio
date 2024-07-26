@@ -20,7 +20,7 @@ export default function About()
             <h1>ABOUT ME</h1>
             <div className="p-div">
                 <p>
-                    My name is Darin Penchev. I'm a <b>.NET</b> developer based in Varna, Bulgaria.
+                    My name is Darin Penchev. I'm a <b>FullStack</b> developer based in Varna, Bulgaria.
                     <br></br>
                     I Specialize in building <b>.NET Web API</b> solutions and <b>React + Typescript</b> Applications.
                     <br></br>

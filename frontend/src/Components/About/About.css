@@ -5,12 +5,15 @@
     margin-block: 40px;
     grid-template-areas:"a a"
                         "b c";
+    padding-top: 80px;
 }
+
 #About>h1{
     grid-area: a;
     text-align: center;
     margin-bottom: 30px;
 }
+
 #About>.p-div{
     display: flex;
     flex-direction: column;
@@ -55,4 +58,38 @@
     gap: 15px;
     flex-wrap: wrap;
     padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 768px)
+{
+    #About{
+        grid-template-areas: "a a"
+                             "b b"
+                             "c c";
+    }
+    #About>.p-div{
+        border-top-right-radius: 15px;
+        border-right: none;
+        border-bottom: 1px solid lightgray;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 30px;
+        text-align: center;
+    }
+    #About>.p-div>p{
+        font-size: 14px;
+    }
+    #About>.technology-div
+    {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+    }
+    #About>.technology-div img{
+        width: 40px;
+    }
 }

@@ -6,49 +6,29 @@ import { PropsWithChildren, useEffect, useState } from "react";
 
 interface props extends PropsWithChildren{
     styleClass: string,
-    closeModal?: () => void
+    isModal: boolean,
+    closeModal?: () => void,
 }
+
 export default function NavBar({ styleClass, children, closeModal }: props) {
-  const SCROLL_TOP_BOUNDARY = 170;
-  const [aboutScroll, setAboutScroll] = useState(-1);
-  const [projectsScroll, setProjectsScroll] = useState(0);
-  const [contactScroll, setContactScroll] = useState(0);
-  const [scrollTop, setScrollTop] = useState(0);
-
-  useEffect(() => {
-    function handleScroll() {
-      setScrollTop(window.scrollY);
-      const about = document.querySelector("#About");
-      const projects = document.querySelector("#Projects");
-      const contact = document.querySelector("#Contact");
-      if (about == null) return;
-      if (projects == null) return
-      if (contact == null) return;
-
-      setAboutScroll(about.getBoundingClientRect().top);
-      setProjectsScroll(projects.getBoundingClientRect().top);
-      setContactScroll(contact.getBoundingClientRect().top);
-    }
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-  })
-
-  function handleScrollClick(elementScroll: number){
-    closeModal && closeModal();
-    window.scrollTo(0, elementScroll + scrollTop - 100);
-  }
+  useEffect(() => {console.log("A")})
 
   return (
-    <nav className={styleClass || `nav-bar ${scrollTop > SCROLL_TOP_BOUNDARY  ? "scrolled" : ""}`}>
+    <nav className={styleClass || `nav-bar`}>
       {children}
       <div className="internal-link-container">
-        <a className="nav-button" onClick={() => { handleScrollClick(-window.scrollY + 80) }}>Home</a>
-        <a className="nav-button" onClick={() => { handleScrollClick(aboutScroll) }} >About</a>
-        <a className="nav-button" onClick={() => { handleScrollClick(projectsScroll) }}>Projects</a>
-        <a className="nav-button" onClick={() => { handleScrollClick(contactScroll) }}>Contact</a>
+        <a className="nav-button" onClick={() => {
+          closeModal && closeModal();
+          window.scrollTo({top: 0});
+        }}>Home</a>
+        <a className="nav-button" href="#About" onClick={() => closeModal && closeModal()}>About</a>
+        <a className="nav-button" href="#Projects" onClick={() => closeModal && closeModal()}>Projects</a>
+        <a className="nav-button" onClick={() => {
+          closeModal && closeModal()
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+          });
+        }}>Contact</a>
       </div>
       <div>
         <a className="logo-link" href="https://github.com/dante2302" target="_blank"><img src={githubLogo} className="nav-logo" /></a>
