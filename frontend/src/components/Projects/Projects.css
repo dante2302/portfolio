@@ -16,6 +16,10 @@
     width: 100%;
 }
 
+#Projects i{
+    color: grey;
+}
+
 .project-outer {
     background: white;
     border-radius: 15px;

@@ -16,7 +16,6 @@ const bakery: Project = {
                     <br></br>
                     <b>Admin</b> - Lists all orders, gives the right to Change/Add/Delete products.
                     <br></br>
-                    <i style={{fontSize: "12px"}}>Note: Admin Panel is yet to be finished.</i>
                 </>
 }
 
